@@ -1,3 +1,58 @@
+# 🚀 High-Performance Texture Feature Extraction (Textons + LTxXORp)
+
+## 📌 Overview
+
+This project demonstrates how to transform a **functionally correct implementation** into a **high-performance, production-ready system** using:
+
+- **C++**
+- **OpenCV**
+- **MPI (Distributed Computing)**
+- **CUDA (GPU Acceleration)**
+
+We implement and optimize a **parallel texture feature extraction pipeline** based on:
+
+- **Texton Calculation**
+- **LTxXORp (Local Texture XOR Pattern)**
+
+---
+
+## 🧠 Algorithm Summary
+
+### 1. Texton Calculation
+- Operates on **2×2 pixel blocks**
+- Produces a **texton-coded image**
+- Reduces spatial redundancy
+
+### 2. LTxXORp Calculation
+- Similar to **Local Binary Pattern (LBP)**
+- Compares each pixel with its neighbors
+- Encodes local texture structure
+
+---
+
+## ⚡ Optimization Journey
+
+| Stage | Description |
+|------|------------|
+| ❌ Naive Implementation | Functional but slow |
+| ✅ Optimized Implementation | High-performance, scalable |
+
+---
+
+## 🔑 Key Optimization Principles
+
+### 1️⃣ Master Your Tools (OpenCV)
+
+#### ❌ Naive
+- Manual memory allocation (`new`, `delete`)
+- Pixel access using `.at<>()`
+
+#### ✅ Optimized
+- Use `cv::Mat` (contiguous memory, cache-friendly)
+- Direct pointer access:
+  ```cpp
+  uchar* row_ptr = image.ptr<uchar>(i);
+
 # Build OpenCV with CUDA and C++ Support on Ubuntu
 
 This guide explains how to build and install **OpenCV** with **CUDA** and **cuDNN** support for **C++ development** on Ubuntu. The result is a GPU-accelerated OpenCV installation ready for high-performance computer vision tasks.
